@@ -34,7 +34,7 @@ public class TestMark {
 
 
     @Test (expected = RuntimeException.class)
-    public void testGetStringEquivalentOfMarkNegativeWithPositiveMark(){
+    public void testGetStringEquivalentOfMarkNegativeWithUpperPositiveMark(){
         int actual_marks = 11;
         String actual = getStringEquivalentOfMark(actual_marks);
     }
