@@ -61,6 +61,15 @@ public class TestNumber {
     }
 
     @Test
+    public void testGetStringNumberHundredsTree(){
+        int actual_number = 999;
+        String expected = "nine hundred ninety-nine";
+
+        String actual = getStringNumber(actual_number);
+        assertEquals(expected, actual);
+    }
+
+    @Test
     public void testGetStringNumberNegativeZero(){
         int actual_number = 0;
         String expected = "out of out bound";
