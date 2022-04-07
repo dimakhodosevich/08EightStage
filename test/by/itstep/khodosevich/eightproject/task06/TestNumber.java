@@ -43,9 +43,18 @@ public class TestNumber {
     }
 
     @Test
-    public void testGetStringNumberHundreds(){
+    public void testGetStringNumberHundredsOne(){
         int actual_number = 221;
         String expected = "two hundred twenty-one";
+
+        String actual = getStringNumber(actual_number);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testGetStringNumberHundredsTwo(){
+        int actual_number = 657;
+        String expected = "six hundred fifty-seven";
 
         String actual = getStringNumber(actual_number);
         assertEquals(expected, actual);
