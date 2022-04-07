@@ -9,7 +9,7 @@ public class TestAge {
     @Test
     public void testGetStringAgePositiveOne(){
         double actual_age = 1;
-        String expected = "Один";
+        String expected = "один год";
 
         String actual = getStringAge(actual_age);
         assertEquals(expected,actual);
@@ -18,7 +18,7 @@ public class TestAge {
     @Test
     public void testGetStringAgePositiveTwo(){
         double actual_age = 19;
-        String expected = "Девятнадцать";
+        String expected = "девятнадцать лет";
 
         String actual = getStringAge(actual_age);
         assertEquals(expected,actual);
@@ -27,7 +27,7 @@ public class TestAge {
     @Test
     public void testGetStringAgePositiveTree(){
         double actual_age = 21;
-        String expected = "Двадцать один";
+        String expected = "двадцать один год";
 
         String actual = getStringAge(actual_age);
         assertEquals(expected,actual);
@@ -36,7 +36,7 @@ public class TestAge {
     @Test
     public void testGetStringAgePositiveFour(){
         double actual_age = 100;
-        String expected = "Сто лет";
+        String expected = "сто лет";
 
         String actual = getStringAge(actual_age);
         assertEquals(expected,actual);
@@ -45,7 +45,25 @@ public class TestAge {
     @Test
     public void testGetStringAgePositiveFive(){
         double actual_age = 119;
-        String expected = "Сто девятнадцать лет";
+        String expected = "сто девятнадцать лет";
+
+        String actual = getStringAge(actual_age);
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    public void testGetStringAgePositiveSix(){
+        double actual_age = 74;
+        String expected = "семьдесят четыре года";
+
+        String actual = getStringAge(actual_age);
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    public void testGetStringAgePositiveSeven(){
+        double actual_age = 4;
+        String expected = "четыре года";
 
         String actual = getStringAge(actual_age);
         assertEquals(expected,actual);
