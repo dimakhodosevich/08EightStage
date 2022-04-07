@@ -9,7 +9,8 @@ public class TestLetter {
     @Test
     public void testCheckSymbolVowel(){
         char[] actual_values = {'a','o','i','e','y','u',};
-        String expected = "Yes.Yes.Yes.Yes.Yes.Yes.";
+        String expected = "Your letter is vowel.Your letter is vowel.Your letter is vowel." +
+                "Your letter is vowel.Your letter is vowel.Your letter is vowel.";
         String actual = "";
 
         for(char element: actual_values){
@@ -25,7 +26,7 @@ public class TestLetter {
                 'h','j','k','l','z','x','c','v','b','n','m'};
         StringBuilder expectedBuilder = new StringBuilder();
         for(char element:actual_values){
-            expectedBuilder.append("No.");
+            expectedBuilder.append("Your letter is consonant.");
         }
         String expected = expectedBuilder+"";
         String actual = "";
