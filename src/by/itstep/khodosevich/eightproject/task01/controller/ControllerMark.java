@@ -1,7 +1,7 @@
-package by.itstep.khodosevich.eightproject.controller;
+package by.itstep.khodosevich.eightproject.task01.controller;
 
-import by.itstep.khodosevich.eightproject.module.logic.Mark;
-import by.itstep.khodosevich.eightproject.view.Print;
+import by.itstep.khodosevich.eightproject.task01.logic.Mark;
+import by.itstep.khodosevich.eightproject.task01.view.Print;
 
 import java.util.Scanner;
 

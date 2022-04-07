@@ -1,8 +1,9 @@
 package by.itstep.khodosevich.eightproject.task01;
 
 import org.junit.Test;
+
+import static by.itstep.khodosevich.eightproject.task01.logic.Mark.*;
 import static org.junit.Assert.*;
-import static by.itstep.khodosevich.eightproject.module.logic.Mark.*;
 
 public class TestMark {
 
