@@ -1,4 +1,4 @@
-package by.itstep.khodosevich.eightproject.task01.module.logic;
+package by.itstep.khodosevich.eightproject.module.logic;
 
 public class Mark {
 

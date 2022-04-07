@@ -1,8 +1,9 @@
-package by.itstep.khodosevich.eightproject.task01.controller;
+package by.itstep.khodosevich.eightproject.controller;
 
-import by.itstep.khodosevich.eightproject.task01.view.Print;
+import by.itstep.khodosevich.eightproject.module.logic.Mark;
+import by.itstep.khodosevich.eightproject.view.Print;
+
 import java.util.Scanner;
-import static by.itstep.khodosevich.eightproject.task01.module.logic.Mark.*;
 
 public class ControllerMark {
     public static void main(String[] args) {
@@ -10,7 +11,7 @@ public class ControllerMark {
         Print.print("Input your mark:");
         int mark = scanner.nextInt();
 
-        String msg = getStringEquivalentOfMark(mark);
+        String msg = Mark.getStringEquivalentOfMark(mark);
         Print.print(msg);
 
         scanner.close();

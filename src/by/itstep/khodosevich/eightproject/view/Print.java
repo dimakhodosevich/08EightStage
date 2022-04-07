@@ -1,4 +1,4 @@
-package by.itstep.khodosevich.eightproject.task01.view;
+package by.itstep.khodosevich.eightproject.view;
 
 public class Print {
 
