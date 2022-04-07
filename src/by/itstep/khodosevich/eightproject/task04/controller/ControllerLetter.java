@@ -1,7 +1,6 @@
 package by.itstep.khodosevich.eightproject.task04.controller;
 
 import by.itstep.khodosevich.eightproject.task03.view.Printer;
-
 import java.util.Scanner;
 import static by.itstep.khodosevich.eightproject.task04.module.Letter.*;
 

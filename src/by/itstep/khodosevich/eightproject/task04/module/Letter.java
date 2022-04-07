@@ -4,9 +4,7 @@ public class Letter {
     public static String checkSymbol(char ch){
 
         String result = "Not letter.";
-
         result = checkLetterVowel(ch)?"Your letter is vowel.":result;
-
         result = checkLetterConsonant(ch)?"Your letter is consonant.":result;
 
         return result;

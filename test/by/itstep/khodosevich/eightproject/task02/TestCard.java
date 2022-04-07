@@ -57,13 +57,13 @@ public class TestCard {
     public void testGetCardNameNegativeWithUpperNumber(){
 
         int cardNumber = 15;
-        String actual = getCardName(cardNumber);
+        getCardName(cardNumber);
     }
 
     @Test(expected = RuntimeException.class)
     public void testGetCardNameNegativeWithLowerNumber(){
 
         int cardNumber = 5;
-        String actual = getCardName(cardNumber);
+        getCardName(cardNumber);
     }
 }

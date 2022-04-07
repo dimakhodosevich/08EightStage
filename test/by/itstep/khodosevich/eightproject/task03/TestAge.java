@@ -100,13 +100,13 @@ public class TestAge {
     @Test(expected = RuntimeException.class)
     public void testGetStringAgeNegativeOne() {
         double actual_age = -1;
-        String actual = getStringAge(actual_age);
+        getStringAge(actual_age);
     }
 
     @Test(expected = RuntimeException.class)
     public void testGetStringAgeNegativeTwo() {
         double actual_age = 121;
-        String actual = getStringAge(actual_age);
+        getStringAge(actual_age);
     }
 
 
