@@ -39,99 +39,152 @@ public class Age {
     public static final String MUCH_YEAR = "Лет"; //
 
 
+    public static String getStringAge(double age) {
 
-    public static String getStringAge(double age){
-
-        if(age<1 || age>120){
+        if (age < 1 || age > 120) {
             throw new RuntimeException();
         }
 
-        int ageInt = (int)age;
+        int ageInt = (int) age;
 
-        int ageHundred = ageInt/100;
-        int ageTen = (ageInt-ageHundred*100)/10;
-        int ageTenUnit = (ageInt-ageHundred*100);
-        int ageUnit = ageInt-ageHundred*100-ageTen*10;
+        int ageHundred = ageInt / 100;
+        int ageTen = (ageInt - ageHundred * 100) / 10;
+        int ageTenUnit = (ageInt - ageHundred * 100);
+        int ageUnit = ageInt - ageHundred * 100 - ageTen * 10;
 
         String result = "";
-        result += ageHundred>0?getStringAgeHundred(ageHundred):(result);
-        if(ageTenUnit<20){
-            result += ageTenUnit>0?getStringAgeUnit(ageTenUnit):("");
-        }else {
-            result += ageTen > 0 ? getStringAgeTen(ageTen) : (result);
-            result += ageUnit>0?getStringAgeUnit(ageUnit):(result);
+        result += ageHundred > 0 ? getStringAgeHundred(ageHundred) : ("");
+        if (ageTenUnit < 20) {
+            result += ageTenUnit > 0 ? getStringAgeUnit(ageTenUnit) : ("");
+        } else {
+            result += ageTen > 0 ? getStringAgeTen(ageTen) : ("");
+            result += ageUnit > 0 ? getStringAgeUnit(ageUnit) : ("");
         }
 
-        result+=getStringEnding(ageInt);
+        result += getStringEnding(ageInt);
         result = result.toLowerCase().trim();
 
         return result;
     }
 
-    private static String getStringAgeHundred(int ageHundred){
-        return ONE_HUNDRED +" ";
+    private static String getStringAgeHundred(int ageHundred) {
+        return ONE_HUNDRED + " ";
     }
 
-    private static String getStringAgeTen(int ageTen){
+    private static String getStringAgeTen(int ageTen) {
 
         String result = "";
 
-        switch (ageTen){
-            case 2: result = TWENTY; break;
-            case 3: result = THIRTY; break;
-            case 4: result = FOURTY; break;
-            case 5: result = FIFTY; break;
-            case 6: result = SIXTY; break;
-            case 7: result = SEVENTY; break;
-            case 8: result = EIGHTY; break;
-            case 9: result = NINETY; break;
+        switch (ageTen) {
+            case 2:
+                result = TWENTY;
+                break;
+            case 3:
+                result = THIRTY;
+                break;
+            case 4:
+                result = FOURTY;
+                break;
+            case 5:
+                result = FIFTY;
+                break;
+            case 6:
+                result = SIXTY;
+                break;
+            case 7:
+                result = SEVENTY;
+                break;
+            case 8:
+                result = EIGHTY;
+                break;
+            case 9:
+                result = NINETY;
+                break;
         }
-        return result +" ";
+        return result + " ";
     }
 
-    private static String getStringAgeUnit(int ageUnit){
+    private static String getStringAgeUnit(int ageUnit) {
 
         String result = "";
 
-        switch (ageUnit){
-            case 1: result = ONE; break;
-            case 2: result = TWO; break;
-            case 3: result = TREE; break;
-            case 4: result = FOUR; break;
-            case 5: result = FIVE; break;
-            case 6: result = SIX; break;
-            case 7: result = SEVEN; break;
-            case 8: result = EIGHT; break;
-            case 9: result = NINE; break;
-            case 10: result = TEN; break;
-            case 11: result = ELEVEN; break;
-            case 12: result = TWELVE; break;
-            case 13: result = THIRTEEN; break;
-            case 14: result = FOURTEEN; break;
-            case 15: result = FIFTEEN; break;
-            case 16: result = SIXTEEN; break;
-            case 17: result = SEVENTEEN; break;
-            case 18: result = EIGHTEEN; break;
-            case 19: result = NINETEEN; break;
+        switch (ageUnit) {
+            case 1:
+                result = ONE;
+                break;
+            case 2:
+                result = TWO;
+                break;
+            case 3:
+                result = TREE;
+                break;
+            case 4:
+                result = FOUR;
+                break;
+            case 5:
+                result = FIVE;
+                break;
+            case 6:
+                result = SIX;
+                break;
+            case 7:
+                result = SEVEN;
+                break;
+            case 8:
+                result = EIGHT;
+                break;
+            case 9:
+                result = NINE;
+                break;
+            case 10:
+                result = TEN;
+                break;
+            case 11:
+                result = ELEVEN;
+                break;
+            case 12:
+                result = TWELVE;
+                break;
+            case 13:
+                result = THIRTEEN;
+                break;
+            case 14:
+                result = FOURTEEN;
+                break;
+            case 15:
+                result = FIFTEEN;
+                break;
+            case 16:
+                result = SIXTEEN;
+                break;
+            case 17:
+                result = SEVENTEEN;
+                break;
+            case 18:
+                result = EIGHTEEN;
+                break;
+            case 19:
+                result = NINETEEN;
+                break;
         }
-        return result+ " ";
+        return result + " ";
     }
 
-    private static String getStringEnding(int age){
+    private static String getStringEnding(int age) {
 
         String result = MUCH_YEAR;
-        age %=10;
 
-        if(age==1){
+        int ageTemp = age;
+        ageTemp %= 10;
+
+        if (ageTemp == 1 && !(age>=11 && age<=19)) {
             result = ONE_YEAR;
-        } else if( age>1 && age<5){
+        } else if (ageTemp > 1 && ageTemp < 5 && !(age>=11 && age<=19)) {
             result = MANY_YEAR;
         }
 
         return result;
     }
-
-
 
 
 }
